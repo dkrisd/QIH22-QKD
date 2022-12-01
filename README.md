@@ -59,8 +59,8 @@ password that you chose earlier):
 Run the following commands:
 
 ```sh
-pip3 install -e "git+https://github.com/QuTech-Delft/qne-adk.git@a125b2d27f1e5fef2822329cf824b18e22e9d00e#egg=qne-adk"
-pip3 install squidasm==0.8.4 --extra-index-url https://pypi.netsquid.org
+pip3 install qne-adk
+pip3 install squidasm==0.8.4 --extra-index-url=https://pypi.netsquid.org
 ```
 
 You can verify the QNE ADK installation by running
@@ -71,8 +71,7 @@ qne --help
 
 The next few sections will take you step by step on how to create and run
 application using the QNE ADK and SquidASM. For more information, please refer
-to [the QNE-ADK guide](https://www.quantum-network.com/knowledge-base/qne-adk/).
-The QNE-ADK guide contains more detailed information and instructions on what is
+to [the QNE-ADK guide](https://www.quantum-network.com/knowledge-base/qne-quantum-application-development-kit-adk/). The QNE-ADK guide contains more detailed information and instructions on what is
 going on.
 
 ## Creating the application
