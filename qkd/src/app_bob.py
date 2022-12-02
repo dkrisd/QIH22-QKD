@@ -18,18 +18,22 @@ def main(app_config=None, key_length=16):
         epr_sockets=[epr_socket],
     )
 
+    outcomes = []
     with bob:
         # IMPLEMENT YOUR SOLUTION HERE
         logger.info("IMPLEMENT YOUR SOLUTION HERE")
 
-        # Receive an entangled pair using the EPR socket to alice
-        q_ent = epr_socket.recv()[0]
-        # Measure the qubit
-        m = q_ent.measure()
+        for i in range(14):
+            # Receive an entangled pair using the EPR socket to alice
+            q_ent = epr_socket.recv_keep(1)[0]
+            # Measure the qubit
+            m = q_ent.measure()
+            bob.flush()
+            outcomes.append(int(m))
 
     # RETURN THE SECRET KEY HERE
     return {
-        "secret_key": str(m),
+        "secret_key": outcomes,
     }
 
 
