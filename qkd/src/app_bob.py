@@ -23,7 +23,7 @@ def main(app_config=None, key_length=16):
         # IMPLEMENT YOUR SOLUTION HERE
         logger.info("IMPLEMENT YOUR SOLUTION HERE")
 
-        for i in range(14):
+        for i in range(key_length):
             # Receive an entangled pair using the EPR socket to alice
             q_ent = epr_socket.recv_keep(1)[0]
             # Measure the qubit
